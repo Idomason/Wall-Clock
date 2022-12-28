@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: blueviolet;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo Image */
+img {
+  width: 70px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* Developer */
+.numbers::after {
+  content: 'Build by Kevin';
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: black;
+  background-color: wheat;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Entire clock */
+.clock {
+  position: relative;
+  background-color: azure;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 6px solid burlywood;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Numbers */
+
+.numbers .num {
+  position: absolute;
+  font-weight: bold;
+  font-size: 27px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.twelve {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.six {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(20px, -50%);
+}
+
+.three {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-20px, -50%);
+}
+
+/* Arrows */
+
+.arrows {
+  /* background-color: brown; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.arrows::before {
+  content: '';
+  background-color: green;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.arrows .arrow {
+  position: absolute;
+  width: 7px;
+  height: 125px;
+  background-color: black;
+  /* transform: translateY(-50%); */
+  transform-origin: bottom center;
+  bottom: 50%;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Hour */
+.arrows .hour {
+  height: 80px;
+  transform: rotate(30deg);
+  background-color: black;
+}
+
+/* .arrows .minute {
+  height: 80px;
+  transform: rotate(240deg);
+  background-color: black;
+} */
+
+.arrows .second {
+  transform: rotate(240deg);
+  background-color: brown;
+}
